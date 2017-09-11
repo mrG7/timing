@@ -1,0 +1,338 @@
+<!doctype html>
+
+<head>
+<link rel="stylesheet" href="tippy.css">
+<script src="tippy.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet">
+<style>
+
+body{
+    box-sizing: border-box;
+    font-size: 20px;
+    background:#f3f5f7;
+    color: #555;
+    line-height: 3em;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    min-height: 98vh;
+    flex-direction: column;
+}
+
+.tippy-popper{
+    line-height: 1.3em;
+}
+
+.tippy-popper a{
+    color: white !important;
+}
+
+#container{
+    flex: 1;
+    width: 40em;
+    margin: auto;
+    margin-top: 5em;
+}
+
+footer{
+    align-self: flex-end;
+    line-height: 1em;
+    text-align: right;
+    font-size: 15px;
+}
+
+img.icon{
+    max-height: 1em;
+    margin-right: 0.2em;
+    max-width: 1.1em;
+}
+
+img.ellipsis{
+    height: 0.2em;
+    vertical-align: baseline;
+    margin-right: 0.2em;
+}
+
+span.variable{
+    margin: 4px;
+    color: #444;
+    font-weight: bold;
+}
+
+ul{
+    margin: 0;
+    list-style: none;
+}
+
+@keyframes fade0 {
+    0% {opacity: 0; }
+    0.0% {opacity:0; }
+    6.25%  {opacity:1; }
+}
+
+@keyframes fade1 {
+    0% {opacity: 0; }
+    6.25% {opacity:0; }
+    12.5%  {opacity:1; }
+}
+
+@keyframes fade2 {
+    0% {opacity: 0; }
+    12.5% {opacity:0; }
+    18.75%  {opacity:1; }
+}
+
+@keyframes fade3 {
+    0% {opacity: 0; }
+    18.75% {opacity:0; }
+    25.0%  {opacity:1; }
+}
+
+@keyframes fade4 {
+    0% {opacity: 0; }
+    25.0% {opacity:0; }
+    31.25%  {opacity:1; }
+}
+
+@keyframes fade5 {
+    0% {opacity: 0; }
+    31.25% {opacity:0; }
+    37.5%  {opacity:1; }
+}
+
+@keyframes fade6 {
+    0% {opacity: 0; }
+    37.5% {opacity:0; }
+    43.75%  {opacity:1; }
+}
+
+@keyframes fade7 {
+    0% {opacity: 0; }
+    43.75% {opacity:0; }
+    50.0%  {opacity:1; }
+}
+
+@keyframes fade8 {
+    0% {opacity: 0; }
+    50.0% {opacity:0; }
+    56.25%  {opacity:1; }
+}
+
+@keyframes fade9 {
+    0% {opacity: 0; }
+    56.25% {opacity:0; }
+    62.5%  {opacity:1; }
+}
+
+@keyframes fade10 {
+    0% {opacity: 0; }
+    62.5% {opacity:0; }
+    68.75%  {opacity:1; }
+}
+
+@keyframes fade11 {
+    0% {opacity: 0; }
+    68.75% {opacity:0; }
+    75.0%  {opacity:1; }
+}
+
+
+
+.f0{animation: fade0 20s;}
+.f1{animation: fade1 20s;}
+.f2{animation: fade2 20s;}
+.f3{animation: fade3 20s;}
+.f4{animation: fade4 20s;}
+.f5{animation: fade5 20s;}
+.f6{animation: fade6 20s;}
+.f7{animation: fade7 20s;}
+
+
+.f8 {animation: fade8 20s;}
+.f11 {animation: fade8 20s;}
+.f14 {animation: fade8 20s;}
+.f17 {animation: fade8 20s;}
+.f20 {animation: fade8 20s;}
+.f23 {animation: fade8 20s;}
+.f26 {animation: fade8 20s;}
+.f29 {animation: fade8 20s;}
+.f32 {animation: fade8 20s;}
+.f35 {animation: fade8 20s;}
+.f38 {animation: fade8 20s;}
+.f41 {animation: fade8 20s;}
+.f44 {animation: fade8 20s;}
+.f47 {animation: fade8 20s;}
+.f50 {animation: fade8 20s;}
+.f53 {animation: fade8 20s;}
+.f56 {animation: fade8 20s;}
+.f59 {animation: fade8 20s;}
+
+.f9 {animation: fade9 20s;}
+.f12 {animation: fade9 20s;}
+.f15 {animation: fade9 20s;}
+.f18 {animation: fade9 20s;}
+.f21 {animation: fade9 20s;}
+.f24 {animation: fade9 20s;}
+.f27 {animation: fade9 20s;}
+.f30 {animation: fade9 20s;}
+.f33 {animation: fade9 20s;}
+.f36 {animation: fade9 20s;}
+.f39 {animation: fade9 20s;}
+.f42 {animation: fade9 20s;}
+.f45 {animation: fade9 20s;}
+.f48 {animation: fade9 20s;}
+.f51 {animation: fade9 20s;}
+.f54 {animation: fade9 20s;}
+.f57 {animation: fade9 20s;}
+
+.f10 {animation: fade10 20s;}
+.f13 {animation: fade10 20s;}
+.f16 {animation: fade10 20s;}
+.f19 {animation: fade10 20s;}
+.f22 {animation: fade10 20s;}
+.f25 {animation: fade10 20s;}
+.f28 {animation: fade10 20s;}
+.f31 {animation: fade10 20s;}
+.f34 {animation: fade10 20s;}
+.f37 {animation: fade10 20s;}
+.f40 {animation: fade10 20s;}
+.f43 {animation: fade10 20s;}
+.f46 {animation: fade10 20s;}
+.f49 {animation: fade10 20s;}
+.f52 {animation: fade10 20s;}
+.f55 {animation: fade10 20s;}
+.f58 {animation: fade10 20s;}
+
+</style>
+</head>
+
+<!-- - action: add two integers
+  min: 0.25
+  max: 1
+  units: cycle
+  reference: http://www.agner.org/optimize/instruction_tables.pdf
+  notes: Time to add two integers (up to 64-bits)
+-->
+
+<body id="noanim">
+    <div id="container">
+        <div id="intro">
+            If a computer can
+            <span class="variable f1" title="Assembly-level addition (ADD) of two 64-bit integers that have been loaded into registers.<br/>
+            On a modern CPU, takes around 0.1-0.2 ns<br/>
+            Reference: <a href=http://www.agner.org/optimize/instruction_tables.pdf>http://www.agner.org/optimize/instruction_tables.pdf</a>">
+                add two integers
+            </span>
+            <span class="f2">
+                in
+                <span class="variable" title="A human blink typically lasts between 0.1 and 0.4 seconds."><img class="icon" src="icons/eye.svg"> the blink of an eye</span>
+            </span>
+        </div>
+
+        <div class="line">
+            <span class="f3">then,</span>
+            <span class="f4"> 
+                in the time it takes it to
+                <img src="icons/dots.svg" class="ellipsis">
+            </span>
+        </div>
+
+        <ul>
+            
+                <li class="f5">
+                    <img src="icons/dots.svg" class="ellipsis">
+                    <span class="variable" title="Between 0.2 ns and 0.5 ns">multiply two integers</span>,
+                    <span class="f6"> you could</span>
+                    <span class="variable f7" >
+                        <img src="icons/coin.svg" class="icon"> flip a coin
+                    </span>
+                </li>
+            
+                <li class="f8">
+                    <img src="icons/dots.svg" class="ellipsis">
+                    <span class="variable" title="Between 1.0 ns and 2.5 ns">load a value from L1 cache</span>,
+                    <span class="f9"> you could</span>
+                    <span class="variable f10" title="The words &#34;I love you&#34; typically take 1-2 seconds to say. Gathering up the nerve to start saying them in the first place can take much longer">
+                        <img src="icons/love.svg" class="icon"> tell someone you love them
+                    </span>
+                </li>
+            
+                <li class="f11">
+                    <img src="icons/dots.svg" class="ellipsis">
+                    <span class="variable" title="Between 60.0 ns and 120.0 ns">load a value from RAM</span>,
+                    <span class="f12"> you could</span>
+                    <span class="variable f13" title="Assuming a typical domestic kettle, and yorkshire tea bags, between 1 1/2 &amp; 4 minutes">
+                        <img src="icons/tea.svg" class="icon"> make a cup of tea
+                    </span>
+                </li>
+            
+                <li class="f14">
+                    <img src="icons/dots.svg" class="ellipsis">
+                    <span class="variable" title="3.0 µs">snappy compress 1K data</span>,
+                    <span class="f15"> you could</span>
+                    <span class="variable f16" >
+                        <img src="icons/lunch.svg" class="icon"> eat a leisurely lunch
+                    </span>
+                </li>
+            
+                <li class="f17">
+                    <img src="icons/dots.svg" class="ellipsis">
+                    <span class="variable" title="10.0 µs">send 1 KB over 1 Gbps network</span>,
+                    <span class="f18"> you could</span>
+                    <span class="variable f19" >
+                        <img src="icons/car.svg" class="icon"> drive New York ↝ Washington DC
+                    </span>
+                </li>
+            
+                <li class="f20">
+                    <img src="icons/dots.svg" class="ellipsis">
+                    <span class="variable" title="150.0 µs">read 4K randomly from SSD</span>,
+                    <span class="f21"> you could</span>
+                    <span class="variable f22" >
+                        <img src="icons/moon.svg" class="icon"> fly to the moon
+                    </span>
+                </li>
+            
+                <li class="f23">
+                    <img src="icons/dots.svg" class="ellipsis">
+                    <span class="variable" title="250.0 µs">read 1 MB from RAM</span>,
+                    <span class="f24"> you could</span>
+                    <span class="variable f25" >
+                        <img src="icons/moon.svg" class="icon"> fly to the moon
+                    </span>
+                </li>
+            
+                <li class="f26">
+                    <img src="icons/dots.svg" class="ellipsis">
+                    <span class="variable" title="1.0 ms">Read 1 MB from SSD</span>,
+                    <span class="f27"> you could</span>
+                    <span class="variable f28" >
+                        <img src="icons/longhol.svg" class="icon"> go on a long holiday
+                    </span>
+                </li>
+            
+                <li class="f29">
+                    <img src="icons/dots.svg" class="ellipsis">
+                    <span class="variable" title="Between 6.0 ms and 22.0 ms">read a sector from spinning disk</span>,
+                    <span class="f30"> you could</span>
+                    <span class="variable f31" >
+                        <img src="icons/baby.svg" class="icon"> concieve, and have a baby
+                    </span>
+                </li>
+            
+        </ul>
+    </div>
+
+<footer>
+Design &amp; idea offsetdesign Ltd. 2017
+</footer>
+
+<script>
+    tippy('[title]', {
+        performance: true,
+        interactive: true,
+        interactiveBorder: 12,
+        animation: 'perspective'
+    });
+</script>
+
+</body>

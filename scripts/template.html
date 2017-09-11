@@ -1,0 +1,148 @@
+<!doctype html>
+
+<head>
+<link rel="stylesheet" href="tippy.css">
+<script src="tippy.min.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Lato:300,700" rel="stylesheet">
+<style>
+
+body{
+    box-sizing: border-box;
+    font-size: 20px;
+    background:#f3f5f7;
+    color: #555;
+    line-height: 3em;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    min-height: 98vh;
+    flex-direction: column;
+}
+
+.tippy-popper{
+    line-height: 1.3em;
+}
+
+.tippy-popper a{
+    color: white !important;
+}
+
+#container{
+    flex: 1;
+    width: 40em;
+    margin: auto;
+    margin-top: 5em;
+}
+
+footer{
+    align-self: flex-end;
+    line-height: 1em;
+    text-align: right;
+    font-size: 15px;
+}
+
+img.icon{
+    max-height: 1em;
+    margin-right: 0.2em;
+    max-width: 1.1em;
+}
+
+img.ellipsis{
+    height: 0.2em;
+    vertical-align: baseline;
+    margin-right: 0.2em;
+}
+
+span.variable{
+    margin: 4px;
+    color: #444;
+    font-weight: bold;
+}
+
+ul{
+    margin: 0;
+    list-style: none;
+}
+{% for i in range(12) %}
+@keyframes fade{{i}} {
+    0% {opacity: 0; }
+    {{100 * (i/16)}}% {opacity:0; }
+    {{100 * ((i+1)/16)}}%  {opacity:1; }
+}
+{% endfor %}
+
+{% for i in range(8) %}
+.f{{i}}{animation: fade{{i}} 20s;}
+{%- endfor %}
+
+{% for i in range(8,60,3) %}
+.f{{i}} {animation: fade8 20s;}
+{%- endfor %}
+{% for i in range(9,60,3) %}
+.f{{i}} {animation: fade9 20s;}
+{%- endfor %}
+{% for i in range(10,60,3) %}
+.f{{i}} {animation: fade10 20s;}
+{%- endfor %}
+
+</style>
+</head>
+
+<!-- - action: add two integers
+  min: 0.25
+  max: 1
+  units: cycle
+  reference: http://www.agner.org/optimize/instruction_tables.pdf
+  notes: Time to add two integers (up to 64-bits)
+-->
+
+<body id="noanim">
+    <div id="container">
+        <div id="intro">
+            If a computer can
+            <span class="variable f1" title="Assembly-level addition (ADD) of two 64-bit integers that have been loaded into registers.<br/>
+            On a modern CPU, takes around 0.1-0.2 ns<br/>
+            Reference: <a href=http://www.agner.org/optimize/instruction_tables.pdf>http://www.agner.org/optimize/instruction_tables.pdf</a>">
+                add two integers
+            </span>
+            <span class="f2">
+                in
+                <span class="variable" title="A human blink typically lasts between 0.1 and 0.4 seconds."><img class="icon" src="icons/eye.svg"> the blink of an eye</span>
+            </span>
+        </div>
+
+        <div class="line">
+            <span class="f3">then,</span>
+            <span class="f4"> 
+                in the time it takes it to
+                <img src="icons/dots.svg" class="ellipsis">
+            </span>
+        </div>
+
+        <ul>
+            {% for i, timing in enumerate(timings, 1) %}
+                <li class="f{{3*i + 2}}">
+                    <img src="icons/dots.svg" class="ellipsis">
+                    <span class="variable" title="{% if timing.cpu.min == timing.cpu.max %}{{ timing.cpu.unit_min }}{% else %}Between {{ timing.cpu.unit_min }} and {{ timing.cpu.unit_max }}{% endif %}">{{ timing.cpu.action }}</span>,
+                    <span class="f{{3*i + 3}}"> you could</span>
+                    <span class="variable f{{3*i + 4}}" {% if timing.human.desc %}title="{{timing.human.desc|default("")}}"{%endif%}>
+                        <img src="icons/{{ timing.human.icon }}.svg" class="icon"> {{ timing.human.action }}
+                    </span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+<footer>
+Design &amp; idea offsetdesign Ltd. 2017
+</footer>
+
+<script>
+    tippy('[title]', {
+        performance: true,
+        interactive: true,
+        interactiveBorder: 12,
+        animation: 'perspective'
+    });
+</script>
+
+</body>
