@@ -1,0 +1,86 @@
+
+- action: multiply two integers
+  min: 1
+  max: 2
+  units: cycle
+  reference: http://www.agner.org/optimize/instruction_tables.pdf
+  notes: 
+
+- action: divide two integers
+  min: 6
+  max: 95
+  units: cycle
+  reference: http://www.agner.org/optimize/instruction_tables.pdf
+  notes: Division performance is highly dependent on many factors
+
+- action: load a value from L1 cache
+  min: 4
+  max: 10
+  units: cycle
+  reference: https://www.intel.com/content/www/us/en/architecture-and-technology/64-ia-32-architectures-optimization-manual.html
+  notes: Upper limit arbitrarily chosen given caveats in manual
+
+- action: load a value from L2 cache
+  min: 12
+  max: 24
+  units: cycle
+  reference: https://www.intel.com/content/www/us/en/architecture-and-technology/64-ia-32-architectures-optimization-manual.html
+  notes: Upper limit arbitrarily hosen given caveats in manual
+
+- action: load a value from L3 cache
+  min: 26
+  max: 31
+  units: cycle
+  reference: https://www.intel.com/content/www/us/en/architecture-and-technology/64-ia-32-architectures-optimization-manual.html
+  notes:
+
+- action: load a value from RAM
+  min: 60
+  max: 120
+  units: ns
+  reference: https://software.intel.com/sites/products/collateral/hpc/vtune/performance_analysis_guide.pdf
+  notes:
+
+- action: snappy compress 1K data
+  min: 3
+  max: 3
+  units: µs
+  reference: https://gist.github.com/jboner/2841832
+
+- action: send 1 KB over 1 Gbps network
+  min: 10
+  max: 10
+  units: µs
+  reference: https://gist.github.com/jboner/2841832
+
+- action: read 4K randomly from SSD
+  min: 150
+  max: 150
+  units: µs
+  reference: https://gist.github.com/jboner/2841832
+
+- action: read 1 MB from RAM
+  min: 250
+  max: 250
+  units: µs
+  reference: https://gist.github.com/jboner/2841832
+  notes: sequential reads
+
+- action: Round trip within datacenter
+  min: 500
+  max: 500
+  units: µs
+  reference: https://gist.github.com/jboner/2841832
+
+- action: Read 1 MB from SSD
+  min: 1
+  max: 1
+  units: ms
+  reference: https://gist.github.com/jboner/2841832
+  notes: sequential read
+
+- action: read a sector from spinning disk
+  min: 6
+  max: 22
+  units: ms
+  reference: https://en.wikipedia.org/wiki/Hard_disk_drive_performance_characteristics

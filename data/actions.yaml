@@ -1,0 +1,103 @@
+- action: blink your eye
+  min: 100 
+  max: 400 
+  units: ms
+  icon: eye
+  desc: The average eye blink lasts between 100 and 400 ms.  These timings assume a blink takes 100 ms
+- action: make a cup of tea
+  min: 100 
+  max: 250 
+  units: s
+  icon: tea
+  desc: Assuming a typical domestic kettle, and yorkshire tea bags, between 1 1/2 & 4 minutes
+- action: tell someone you love them
+  min: 0.9
+  max: 2 
+  units: s
+  icon: love
+  desc: The words "I love you" typically take 1-2 seconds to say. Gathering up the nerve to start saying them in the first place can take much longer 
+- action: flip a coin
+  min: 500 
+  max: 700
+  units: ms
+  icon: coin
+- action: Open a book
+  min: 500 
+  max: 1000 
+  units: ms
+  icon: book
+- action: Take a step
+  min: 500 
+  max: 600 
+  units: ms
+  icon: walk
+- action: watch a film
+  min: 90
+  max: 130
+  units: min
+  icon: film
+- action: fly UK to America
+  min: 6
+  max: 8
+  units: hour
+  icon: plane
+- action: fly to the moon
+  min: 52
+  max: 120
+  units: hour
+  icon: moon
+- action: toast some bread
+  min: 200
+  max: 240
+  units: s
+  icon: bread
+- action: brush teeth
+  min: 2
+  max: 3
+  units: min
+  icon: toothbrush
+- action: watch a tv show
+  min: 30
+  max: 50
+  units: min
+  icon: tv
+- action: eat a leisurely lunch
+  min: 1
+  max: 2
+  units: hour
+  icon: lunch
+- action: concieve, and have a baby
+  min: 250
+  max: 282
+  units: day
+  icon: baby
+- action: go on a short holiday
+  min: 3
+  max: 6
+  units: day
+  icon: shorthol
+- action: go on a long holiday
+  min: 10
+  max: 20
+  units: day
+  icon: longhol
+- action: get a good night's sleep
+  min: 7
+  max: 9
+  units: hour
+  icon: moon
+- action: send a letter
+  min: 1
+  max: 3
+  units: day
+  icon: mail
+- action: watch lord of the rings
+  min: 3.8
+  max: 3.8
+  units: hour
+  icon: lotr
+- action: drive New York ↝ Washington DC
+  min: 3.8
+  max: 5
+  units: hour
+  icon: car
